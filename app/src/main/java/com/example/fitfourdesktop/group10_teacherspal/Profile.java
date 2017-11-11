@@ -5,6 +5,12 @@ import android.os.Bundle;
 
 public class Profile extends AppCompatActivity {
 
+    String _child;
+    String _father;
+    String _mother;
+    String _specialist;
+    String _phone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -1,8 +1,10 @@
 package com.example.fitfourdesktop.group10_teacherspal;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.ArrayList;
 
@@ -18,18 +20,24 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onClickGameMenu(){
-    }
-
     public void addScore(int add) {
         scoreList.add(add);
     }
 
-    public void onClickScoreList() { }
+    public void onClickGameMenu(View view){
+       Intent gameScreen = new Intent(this, Games.class);
+       startActivity(gameScreen);
+    }
 
-    public void onClickProfile() { }
+    public void onClickScoreList(View view) {
+        Intent scoreScreen = new Intent(this, Scores.class);
+        startActivity(scoreScreen);
+    }
 
-    public void onClickVoiceChanger() { }
+    public void onClickProfile(View View) {
+        Intent profileScreen = new Intent(this, Profile.class);
+        startActivity(profileScreen);
+    }
 
     @Override
     public void onPause(){
