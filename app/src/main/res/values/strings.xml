@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Group 10-Teachers Pal</string>
+    <string name="scoreList">Score List</string>
+    <string name="profile">Profile</string>
+    <string name="voiceChanger">Voice Changer</string>
+    <string name="gameMenu">Game Menu</string>
+    <string name="mainMenu">Main Menu</string>
 </resources>
