@@ -9,6 +9,8 @@ public class VoiceChanger extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_voice_changer);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     public void onClickReturn() {}

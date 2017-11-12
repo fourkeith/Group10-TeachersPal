@@ -9,15 +9,16 @@
     <string name="Puzzle">Puzzle</string>
     <string name="Memory">Memory</string>
 
-    <string name="child">Child\'s Name</string>
-    <string name="Mother">Mother\'s Name</string>
-    <string name="Father">Father\'s Name</string>
-    <string name="Specialist">Specialist</string>
-    <string name="Phone">Phone Number</string>
+    <string name="childT">Child\'s Name</string>
+    <string name="MotherT">Mother\'s Name</string>
+    <string name="FatherT">Father\'s Name</string>
+    <string name="SpecialistT">Specialist</string>
+    <string name="PhoneT">Phone Number</string>
 
     <string name="memAScore">Memory Average Score</string>
     <string name="memRScroe">Memory Most Recent Score</string>
     <string name="puzAScore">Puzzle Average Score</string>
     <string name="puzRScore">Puzzle Most Recent Score</string>
-    <string name="voiceX">Times Voice Used</string>
+    <string name="voiceX">Times Changer Used</string>
+
 </resources>

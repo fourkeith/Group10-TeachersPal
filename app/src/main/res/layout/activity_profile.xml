@@ -7,7 +7,7 @@
     tools:context="com.example.fitfourdesktop.group10_teacherspal.Profile">
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/Phone"
         android:layout_width="wrap_content"
         android:layout_height="57dp"
         android:layout_marginBottom="8dp"
@@ -18,11 +18,11 @@
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
+        app:layout_constraintTop_toBottomOf="@+id/SpecialistT"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/Specialist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -32,10 +32,10 @@
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/Father" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/Father"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -45,10 +45,10 @@
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintTop_toBottomOf="@+id/Mother" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/Mother"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -58,10 +58,10 @@
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/child" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/child"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -80,8 +80,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="40dp"
-        android:text="@string/child"
-        app:layout_constraintEnd_toStartOf="@+id/editText7"
+        android:text="@string/childT"
+        app:layout_constraintEnd_toStartOf="@+id/child"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -93,8 +93,8 @@
         android:layout_marginEnd="60dp"
         android:layout_marginRight="60dp"
         android:layout_marginTop="44dp"
-        android:text="@string/Mother"
-        app:layout_constraintEnd_toStartOf="@+id/editText6"
+        android:text="@string/MotherT"
+        app:layout_constraintEnd_toStartOf="@+id/Mother"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -106,8 +106,8 @@
         android:layout_marginEnd="64dp"
         android:layout_marginRight="64dp"
         android:layout_marginTop="40dp"
-        android:text="@string/Father"
-        app:layout_constraintEnd_toStartOf="@+id/editText5"
+        android:text="@string/FatherT"
+        app:layout_constraintEnd_toStartOf="@+id/Father"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -119,8 +119,8 @@
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
         android:layout_marginTop="136dp"
-        android:text="@string/Specialist"
-        app:layout_constraintEnd_toStartOf="@+id/editText4"
+        android:text="@string/SpecialistT"
+        app:layout_constraintEnd_toStartOf="@+id/Specialist"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -132,9 +132,9 @@
         android:layout_marginRight="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="72dp"
-        android:text="@string/Phone"
+        android:text="@string/PhoneT"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText3"
+        app:layout_constraintEnd_toStartOf="@+id/Phone"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"

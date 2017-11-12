@@ -1,5 +1,6 @@
 package com.example.fitfourdesktop.group10_teacherspal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -11,17 +12,18 @@ import java.util.ArrayList;
 // time to make a project
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Integer> scoreList;
+    int puzAScore;
+    int puzRScore;
+    int memAScore;
+    int memRScore;
+    int changerUsed;
+
     public static final String PREFS_NAME = "MyPrefsFile";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
-
-    public void addScore(int add) {
-        scoreList.add(add);
     }
 
     public void onClickGameMenu(View view){
@@ -43,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public void onPause(){
         super.onPause();
 
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("Name", PREFS_NAME);
 
