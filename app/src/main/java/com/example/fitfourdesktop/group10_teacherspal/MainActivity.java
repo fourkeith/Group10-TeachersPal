@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     int memRScore;
     int changerUsed;
 
+    private static final String tag = "Teachers_Pal";
     public static final String PREFS_NAME = "MyPrefsFile";
 
     @Override
@@ -48,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences settings = getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = settings.edit();
         editor.putString("Name", PREFS_NAME);
+        Log.i(tag, "onPause: set SharedPreferences");
 
         editor.apply();
     }

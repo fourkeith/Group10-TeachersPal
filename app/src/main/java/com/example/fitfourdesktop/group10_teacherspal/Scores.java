@@ -2,6 +2,7 @@ package com.example.fitfourdesktop.group10_teacherspal;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class Scores extends AppCompatActivity {
 
@@ -15,5 +16,7 @@ public class Scores extends AppCompatActivity {
 
     public void displayScores() {}
 
-    public void onClickReturn() {}
+    public void onClickReturn() {
+        Log.i("Teachers_Pal", "onClickReturn: Returned to Game Menu");
+    }
 }

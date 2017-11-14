@@ -2,6 +2,7 @@ package com.example.fitfourdesktop.group10_teacherspal;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 
 public class Puzzle extends AppCompatActivity {
 
@@ -17,7 +18,10 @@ public class Puzzle extends AppCompatActivity {
 
     public void draw() {}
 
-    public void getScore() {}
+    public Integer getScore() {
+        Log.i("Teachers_Pal", "getScore: " + score);
+        return score;
+    }
 
     public void setScore() {}
 }

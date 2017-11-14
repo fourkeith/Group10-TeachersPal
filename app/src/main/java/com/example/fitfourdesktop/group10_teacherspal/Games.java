@@ -3,6 +3,7 @@ package com.example.fitfourdesktop.group10_teacherspal;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class Games extends AppCompatActivity {
@@ -29,6 +30,6 @@ public class Games extends AppCompatActivity {
         startActivity(voiceScreen);
     }
     public void onClickReturn() {
-
+        Log.i("Teachers_Pal", "onClickReturn: Returned to Main Menu");
     }
 }

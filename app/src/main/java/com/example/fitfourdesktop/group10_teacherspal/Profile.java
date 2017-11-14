@@ -85,11 +85,11 @@ public class Profile extends AppCompatActivity {
     public String getPhone()            { return _phone;      }
 
     //setters
-    public void setChild(String name)   { _child = name;      }
-    public void setMother(String name)  { _mother = name;     }
-    public void setSpecialist(String name)         { _specialist = name;}
-    public void setPhone(String phone)  { _phone = phone;     }
-    public void setFather(String name)  { _father = name;     }
+    public void setChild(String name)       { _child = name;      }
+    public void setMother(String name)      { _mother = name;     }
+    public void setSpecialist(String name)  { _specialist = name;}
+    public void setPhone(String phone)      { _phone = phone;     }
+    public void setFather(String name)      { _father = name;     }
 
     @Override
     protected void onDestroy() {
