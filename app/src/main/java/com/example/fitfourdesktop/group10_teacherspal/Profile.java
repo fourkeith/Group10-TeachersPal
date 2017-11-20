@@ -4,8 +4,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
+/**
+ * @author Tyler Wilson
+ * @author Lucas Bittencourt
+ * @author Keith Wheeler
+ */
 public class Profile extends AppCompatActivity {
 
     String _child;
@@ -67,14 +73,18 @@ public class Profile extends AppCompatActivity {
     public void saveProfile() {
         checkBoxes();
 
-        //SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
-        //SharedPreferences.Editor editor = sharedPref.edit();
-        //editor.putString(getString(R.string.childName), _child);
-        //editor.putString(getString(R.string.motherName), _mother);
-        //editor.putString(getString(R.string.fatherName), _father);
-        //editor.putString(getString(R.string.specName), _specialist);
-        //editor.putString(getString(R.string.phoneNum), _phone);
-        //editor.apply();
+        SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString(getString(R.string.childName), _child);
+        editor.putString(getString(R.string.motherName), _mother);
+        editor.putString(getString(R.string.fatherName), _father);
+        editor.putString(getString(R.string.specName), _specialist);
+        editor.putString(getString(R.string.phoneNum), _phone);
+        editor.apply();
+    }
+
+    public void onClickSaveProfile(View view) {
+
     }
 
     //getters

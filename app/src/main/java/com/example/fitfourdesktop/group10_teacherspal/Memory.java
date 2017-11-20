@@ -4,8 +4,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+/**
+ * @author Tyler Wilson
+ * @author Lucas Bittencourt
+ * @author Keith Wheeler
+ */
 public class Memory extends AppCompatActivity {
 
+    // Integer for holding the score
     private Integer score;
 
     @Override

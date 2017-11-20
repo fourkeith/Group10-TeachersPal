@@ -20,5 +20,10 @@
     <string name="puzAScore">Puzzle Average Score</string>
     <string name="puzRScore">Puzzle Most Recent Score</string>
     <string name="voiceX">Times Changer Used</string>
+    <string name="childName">Name</string>
+    <string name="motherName">Name</string>
+    <string name="fatherName">Name</string>
+    <string name="specName">Name</string>
+    <string name="phoneNum">Number</string>
 
 </resources>

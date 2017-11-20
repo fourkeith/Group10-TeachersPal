@@ -6,6 +6,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
+/**
+ * @author Tyler Wilson
+ * @author Lucas Bittencourt
+ * @author Keith Wheeler
+ */
 public class Games extends AppCompatActivity {
 
     @Override

@@ -16,55 +16,55 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".Scores"
-            android:parentActivityName="com.example.fitfourdesktop.group10_teacherspal.MainActivity"
-            android:label="@string/scoreList">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.fitfourdesktop.group10_teacherspal.MainActivity" />
-        </activity>
-
-        <activity android:name=".VoiceChanger"
-            android:parentActivityName="com.example.fitfourdesktop.group10_teacherspal.Games"
-            android:label="@string/voiceChanger">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.fitfourdesktop.group10_teacherspal.Games" />
-        </activity>
-
-        <activity android:name=".Profile"
-            android:parentActivityName="com.example.fitfourdesktop.group10_teacherspal.MainActivity"
-            android:label="@string/profile">
+        <activity
+            android:name=".Scores"
+            android:label="@string/scoreList"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fitfourdesktop.group10_teacherspal.MainActivity" />
         </activity>
-
-        <activity android:name=".Games"
-            android:parentActivityName="com.example.fitfourdesktop.group10_teacherspal.MainActivity"
-            android:label="@string/gameMenu">
+        <activity
+            android:name=".VoiceChanger"
+            android:label="@string/voiceChanger"
+            android:parentActivityName=".Games">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fitfourdesktop.group10_teacherspal.Games" />
+        </activity>
+        <activity
+            android:name=".Profile"
+            android:label="@string/profile"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fitfourdesktop.group10_teacherspal.MainActivity" />
         </activity>
-
-        <activity android:name=".Memory"
-            android:parentActivityName="com.example.fitfourdesktop.group10_teacherspal.Games"
-            android:label="@string/Memory">
+        <activity
+            android:name=".Games"
+            android:label="@string/gameMenu"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.fitfourdesktop.group10_teacherspal.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Memory"
+            android:label="@string/Memory"
+            android:parentActivityName=".Games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fitfourdesktop.group10_teacherspal.Games" />
         </activity>
-
-        <activity android:name=".Puzzle"
-            android:parentActivityName="com.example.fitfourdesktop.group10_teacherspal.Games"
-            android:label="@string/Puzzle">
+        <activity
+            android:name=".Puzzle"
+            android:label="@string/Puzzle"
+            android:parentActivityName=".Games">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fitfourdesktop.group10_teacherspal.Games" />
         </activity>
-
+        <activity android:name=".ProfileView"></activity>
     </application>
 
 </manifest>

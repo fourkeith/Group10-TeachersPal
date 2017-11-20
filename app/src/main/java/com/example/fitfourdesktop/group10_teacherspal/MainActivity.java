@@ -10,7 +10,11 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-// time to make a project
+/**
+ * @author Tyler Wilson
+ * @author Lucas Bittencourt
+ * @author Keith Wheeler
+ */
 public class MainActivity extends AppCompatActivity {
 
     int puzAScore;
@@ -28,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Sends the app to the Game Menu screen
+     * @param view
+     */
     public void onClickGameMenu(View view){
        Intent gameScreen = new Intent(this, Games.class);
        startActivity(gameScreen);
@@ -39,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickProfile(View View) {
-        Intent profileScreen = new Intent(this, Profile.class);
+        Intent profileScreen = new Intent(this, ProfileView.class);
         startActivity(profileScreen);
     }
 

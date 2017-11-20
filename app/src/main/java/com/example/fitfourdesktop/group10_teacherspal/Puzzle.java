@@ -4,6 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+/**
+ * @author Tyler Wilson
+ * @author Lucas Bittencourt
+ * @author Keith Wheeler
+ */
 public class Puzzle extends AppCompatActivity {
 
     private Integer score;
