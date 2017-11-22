@@ -84,7 +84,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void onClickSaveProfile(View view) {
-
+        saveProfile();
     }
 
     //getters
