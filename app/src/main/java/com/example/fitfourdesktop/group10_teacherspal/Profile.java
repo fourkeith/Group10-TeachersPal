@@ -29,44 +29,44 @@ public class Profile extends AppCompatActivity {
     }
 
     public void checkBoxes() {
-        TextView text = (TextView)findViewById(R.id.child);
+        TextView text = findViewById(R.id.child);
         _child = text.getText().toString();
 
-        text = (TextView)findViewById(R.id.Mother);
+        text = findViewById(R.id.Mother);
         _mother =text.getText().toString();
 
-        text = (TextView)findViewById(R.id.Father);
+        text = findViewById(R.id.Father);
         _father = text.getText().toString();
 
-        text = (TextView)findViewById(R.id.Specialist);
+        text = findViewById(R.id.Specialist);
         _specialist = text.getText().toString();
 
-        text = (TextView)findViewById(R.id.Phone);
+        text = findViewById(R.id.Phone);
         _phone = text.getText().toString();
     }
 
     public void displayProfile() {
         SharedPreferences sP = this.getPreferences(Context.MODE_PRIVATE);
 
-        setChild(sP.getString("", ""));
-        setMother(sP.getString("", ""));
-        setFather(sP.getString( "", ""));
-        setSpecialist(sP.getString("", ""));
-        setPhone(sP.getString("", ""));
+        setChild(sP.getString("childName", ""));
+        setMother(sP.getString("motherName", ""));
+        setFather(sP.getString( "fatherName", ""));
+        setSpecialist(sP.getString("specName", ""));
+        setPhone(sP.getString("phoneNum", ""));
 
-        TextView text = (TextView)findViewById(R.id.child);
+        TextView text = findViewById(R.id.child);
         text.setText(getChild());
 
-        text = (TextView)findViewById(R.id.Mother);
+        text = findViewById(R.id.Mother);
         text.setText(getMother());
 
-        text = (TextView)findViewById(R.id.Father);
+        text = findViewById(R.id.Father);
         text.setText(getFather());
 
-        text = (TextView)findViewById(R.id.Specialist);
+        text = findViewById(R.id.Specialist);
         text.setText(getSpecialist());
 
-        text = (TextView)findViewById(R.id.Phone);
+        text = findViewById(R.id.Phone);
         text.setText(getPhone());
     }
 
@@ -75,16 +75,17 @@ public class Profile extends AppCompatActivity {
 
         SharedPreferences sharedPref = this.getPreferences(Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString(getString(R.string.childName), _child);
-        editor.putString(getString(R.string.motherName), _mother);
-        editor.putString(getString(R.string.fatherName), _father);
-        editor.putString(getString(R.string.specName), _specialist);
-        editor.putString(getString(R.string.phoneNum), _phone);
+        editor.putString("childName", _child);
+        editor.putString("motherName", _mother);
+        editor.putString("fatherName", _father);
+        editor.putString("specName", _specialist);
+        editor.putString("phoneNum", _phone);
         editor.apply();
     }
 
     public void onClickSaveProfile(View view) {
         saveProfile();
+        displayProfile();
     }
 
     //getters
