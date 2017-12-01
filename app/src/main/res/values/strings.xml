@@ -25,5 +25,7 @@
     <string name="fatherName">Name</string>
     <string name="specName">Name</string>
     <string name="phoneNum">Number</string>
+    <string name="record">Record</string>
+    <string name="playback">Playback</string>
 
 </resources>
