@@ -12,13 +12,14 @@
         android:layout_height="57dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:layout_marginTop="60dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Specialist"
+        app:layout_constraintTop_toBottomOf="@+id/SpecialistBox"
         app:layout_constraintVertical_bias="0.0" />
 
     <EditText
@@ -45,7 +46,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Mother" />
+        app:layout_constraintTop_toBottomOf="@+id/MotherBox" />
 
     <EditText
         android:id="@+id/Mother"
@@ -58,10 +59,10 @@
         android:inputType="textPersonName"
         android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/child" />
+        app:layout_constraintTop_toBottomOf="@+id/ChildBox" />
 
     <EditText
-        android:id="@+id/child"
+        android:id="@+id/Child"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
@@ -74,32 +75,28 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/ChildBox"
         android:layout_width="94dp"
         android:layout_height="22dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
         android:text="@string/childT"
-        app:layout_constraintEnd_toStartOf="@+id/child"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/MotherBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="60dp"
-        android:layout_marginRight="60dp"
         android:layout_marginTop="44dp"
         android:text="@string/MotherT"
-        app:layout_constraintEnd_toStartOf="@+id/Mother"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/ChildBox" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/FatherBox"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginEnd="64dp"
@@ -109,22 +106,21 @@
         app:layout_constraintEnd_toStartOf="@+id/Father"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/MotherBox" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/SpecialistBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
         android:layout_marginRight="76dp"
         android:layout_marginTop="136dp"
         android:text="@string/SpecialistT"
-        app:layout_constraintEnd_toStartOf="@+id/Specialist"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/Father" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/PhoneBox"
         android:layout_width="wrap_content"
         android:layout_height="21dp"
         android:layout_marginBottom="8dp"
@@ -133,10 +129,9 @@
         android:layout_marginTop="72dp"
         android:text="@string/PhoneT"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Phone"
         app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/SpecialistBox"
         app:layout_constraintVertical_bias="0.064" />
 
     <Button
@@ -160,7 +155,8 @@
         android:layout_marginTop="32dp"
         android:text="Submit Profile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Phone"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneBox"
         tools:ignore="RtlCompat"
         android:layout_marginLeft="250dp" />
 </android.support.constraint.ConstraintLayout>
+

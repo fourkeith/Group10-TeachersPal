@@ -29,7 +29,7 @@ public class Profile extends AppCompatActivity {
     }
 
     public void checkBoxes() {
-        TextView text = findViewById(R.id.child);
+        TextView text = findViewById(R.id.Child);
         _child = text.getText().toString();
 
         text = findViewById(R.id.Mother);
@@ -54,7 +54,7 @@ public class Profile extends AppCompatActivity {
         setSpecialist(sP.getString("specName", ""));
         setPhone(sP.getString("phoneNum", ""));
 
-        TextView text = findViewById(R.id.child);
+        TextView text = findViewById(R.id.Child);
         text.setText(getChild());
 
         text = findViewById(R.id.Mother);
