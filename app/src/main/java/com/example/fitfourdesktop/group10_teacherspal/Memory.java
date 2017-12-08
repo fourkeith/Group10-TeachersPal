@@ -44,8 +44,14 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         GridLayout gridLayout = (GridLayout)findViewById(R.id.memoryGame);
-        int numColumns = gridLayout.getColumnCount();
-        int numRows = gridLayout.getRowCount();
+        int numColumns = 0;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            numColumns = gridLayout.getColumnCount();
+        }
+        int numRows = 0;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
+            numRows = gridLayout.getRowCount();
+        }
         numberOfElements = numColumns * numRows;
 
         buttons = new MemoryButton[numberOfElements];
@@ -60,6 +66,8 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
         buttonGraphicIDs[5] = R.drawable.button_6;
         buttonGraphicIDs[6] = R.drawable.button_7;
         buttonGraphicIDs[7] = R.drawable.button_8;
+
+        buttonGraphicPositions = new int[numberOfElements];
 
         shuffleButtons();
 
@@ -107,8 +115,6 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
         }
 
     }
-
-    public void draw() {}
 
     public Integer getScore() {
         Log.i("Teachers_Pal", "getScore: " + score);

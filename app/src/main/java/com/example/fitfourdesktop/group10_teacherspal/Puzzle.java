@@ -22,8 +22,6 @@ public class Puzzle extends AppCompatActivity {
 
     }
 
-    public void draw() {}
-
     public Integer getScore() {
         Log.i("Teachers_Pal", "getScore: " + score);
         return score;
