@@ -1,8 +1,11 @@
 package com.example.fitfourdesktop.group10_teacherspal;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.widget.AppCompatDrawableManager;
+import android.widget.Button;
 import android.widget.GridLayout;
 
 /**
@@ -10,7 +13,8 @@ import android.widget.GridLayout;
  * @author Lucas Bittencourt
  */
 
-public class MemoryButton extends android.support.v7.widget.AppCompatButton {
+@SuppressLint("AppCompatCustomView")
+public class MemoryButton extends Button {
 
     protected int row;
     protected int column;
@@ -22,6 +26,7 @@ public class MemoryButton extends android.support.v7.widget.AppCompatButton {
     protected Drawable front;
     protected Drawable back;
 
+    @SuppressLint("RestrictedApi")
     public MemoryButton(Context context, int row, int column, int frontImageDrawableID) {
 
         super(context);
@@ -30,8 +35,12 @@ public class MemoryButton extends android.support.v7.widget.AppCompatButton {
         this.column = column;
         this.frontDrawableID = frontImageDrawableID;
 
-        front = ContextCompat.getDrawable(context, frontImageDrawableID);
-        back = ContextCompat.getDrawable(context, R.drawable.button_back);
+
+        front = AppCompatDrawableManager.get().getDrawable(context, frontImageDrawableID);
+        back = AppCompatDrawableManager.get().getDrawable(context, R.drawable.button_back);
+
+        //front = ContextCompat.getDrawable(context, frontImageDrawableID);
+        //back = ContextCompat.getDrawable(context, R.drawable.button_back);
 
         setBackground(back);
         GridLayout.LayoutParams tmpParams = new GridLayout.LayoutParams(GridLayout.spec(row),

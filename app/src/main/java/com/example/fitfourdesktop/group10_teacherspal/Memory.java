@@ -29,8 +29,8 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
 
     private MemoryButton[] buttons;
 
-    private List<Integer> buttonGraphicPositions;
-    private List<Integer> buttonGraphicIDs;
+    private int[] buttonGraphicPositions;
+    private int[] buttonGraphicIDs;
 
     private MemoryButton firstButton;
     private MemoryButton secondButton;
@@ -50,22 +50,23 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
 
         buttons = new MemoryButton[numberOfElements];
 
-        buttonGraphicIDs = new ArrayList<>();
-        buttonGraphicIDs.add(R.drawable.button_1);
-        buttonGraphicIDs.add(R.drawable.button_2);
-        buttonGraphicIDs.add(R.drawable.button_3);
-        buttonGraphicIDs.add(R.drawable.button_4);
-        buttonGraphicIDs.add(R.drawable.button_5);
-        buttonGraphicIDs.add(R.drawable.button_6);
-        buttonGraphicIDs.add(R.drawable.button_7);
-        buttonGraphicIDs.add(R.drawable.button_8);
+        buttonGraphicIDs = new int[numberOfElements / 2];
+
+        buttonGraphicIDs[0] = R.drawable.button_1;
+        buttonGraphicIDs[1] = R.drawable.button_2;
+        buttonGraphicIDs[2] = R.drawable.button_3;
+        buttonGraphicIDs[3] = R.drawable.button_4;
+        buttonGraphicIDs[4] = R.drawable.button_5;
+        buttonGraphicIDs[5] = R.drawable.button_6;
+        buttonGraphicIDs[6] = R.drawable.button_7;
+        buttonGraphicIDs[7] = R.drawable.button_8;
 
         shuffleButtons();
 
         for (int row = 0; row < numRows; row++) {
             for (int column = 0; column < numColumns; column++) {
                 MemoryButton tmpButton = new MemoryButton(this, row, column,
-                        buttonGraphicIDs.get(buttonGraphicPositions.get((row * numColumns + column))));
+                        buttonGraphicIDs[buttonGraphicPositions[row * numColumns + column]]);
                 if (Build.VERSION.SDK_INT < 17) {
                     for (;;) {
                         final int result = sNextGeneratedId.get();
@@ -93,16 +94,16 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
         /* First, this will create each button on a fixed,
            ordered position inside the GridLayout */
         for (int i = 0; i < numberOfElements; i++) {
-            buttonGraphicPositions.add((i % (numberOfElements / 2)));
+            buttonGraphicPositions[i] = i % (numberOfElements / 2);
         }
 
         /* Then, all of the positions will be swapped,
            giving the game some randomness */
         for (int i = 0; i < numberOfElements; i++) {
-            int tmp = buttonGraphicPositions.get(i);
+            int tmp = buttonGraphicPositions[i];
             int swapIndex = random.nextInt(16);
-            buttonGraphicPositions.set(i, buttonGraphicPositions.get(swapIndex));
-            buttonGraphicPositions.set(swapIndex, tmp);
+            buttonGraphicPositions[i] = buttonGraphicPositions[swapIndex];
+            buttonGraphicPositions[swapIndex] = tmp;
         }
 
     }
