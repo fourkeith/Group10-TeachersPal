@@ -23,7 +23,7 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
     private static final AtomicInteger sNextGeneratedId = new AtomicInteger(1);
 
     // Integer for holding the score
-    private Integer score;
+    private Integer score = 0;
 
     private int numberOfElements;
 
@@ -121,7 +121,7 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
         return score;
     }
 
-    public void setScore() {}
+    public void setScore() { score = score + 1; }
 
     @Override
     public void onClick(View view) {
@@ -161,6 +161,10 @@ public class Memory extends AppCompatActivity implements View.OnClickListener {
             button.setEnabled(false);
 
             firstButton = null;
+
+            setScore();
+
+            getScore();
 
             return;
         }
