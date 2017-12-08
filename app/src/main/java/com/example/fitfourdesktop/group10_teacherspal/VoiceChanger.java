@@ -1,5 +1,5 @@
 package com.example.fitfourdesktop.group10_teacherspal;
-/*
+
 
 import android.media.MediaPlayer;
 import android.media.MediaRecorder;
@@ -14,7 +14,7 @@ import java.io.IOException;
  * @author Lucas Bittencourt
  * @author Keith Wheeler
  */
-/*
+
 
 public class VoiceChanger extends AppCompatActivity {
 
@@ -32,12 +32,11 @@ public class VoiceChanger extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         //microphone stuffs
-        fileName = getExternalCacheDir().getAbsolutePath();
-        fileName += "/audioredordtest.3gp";
+        fileName += "../res/audiotest.3gp";
 
         recorder = new MediaRecorder();
-        recorder.setAudioSource(MediaRecorder.AudioSource.MIC);
-        recorder.setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP);
+        recorder.setAudioSource(MediaRecorder.AudioSource.DEFAULT);
+        recorder.setOutputFormat(MediaRecorder.OutputFormat.AMR_NB);
         recorder.setOutputFile(fileName);
         recorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
         try {
@@ -61,13 +60,13 @@ public class VoiceChanger extends AppCompatActivity {
 
 
     public void onClickRecord(View view) {
-        if(start) {
+        if(start && recorder == null) {
             start = false;
             recorder.start();
         }
 
         else {
-            recorder.stop();
+            //recorder.stop();
             start = true;
         }
     }
@@ -76,7 +75,7 @@ public class VoiceChanger extends AppCompatActivity {
     public void onClickPlay(View view) {
         if (start) {
             player.start();
-            start = false;
+            start = true;
         }
         else {
             player.stop();
@@ -97,7 +96,9 @@ public class VoiceChanger extends AppCompatActivity {
         }
     }
 }
-*/
+
+
+/*
 import android.Manifest;
 import android.content.Context;
 import android.content.pm.PackageManager;
@@ -281,3 +282,4 @@ public class VoiceChanger extends AppCompatActivity {
         }
     }
 }
+*/

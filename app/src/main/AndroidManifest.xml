@@ -3,6 +3,9 @@
     package="com.example.fitfourdesktop.group10_teacherspal">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <supports-gl-texture android:name="GL_OES_compressed_ETC1_RGB8_texture" />
+    <supports-gl-texture android:name="GL_OES_compressed_paletted_texture" />
 
     <application
         android:allowBackup="true"
@@ -66,7 +69,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.fitfourdesktop.group10_teacherspal.Games" />
         </activity>
-        <activity android:name=".ProfileView"></activity>
     </application>
 
 </manifest>

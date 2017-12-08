@@ -12,6 +12,7 @@ import android.util.Log;
 public class Puzzle extends AppCompatActivity {
 
     private Integer score;
+    private MyGLSurfaceView surface;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
