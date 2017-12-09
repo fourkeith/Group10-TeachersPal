@@ -20,11 +20,6 @@ public class Games extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void onClickPuzzleGame(View view) {
-        Intent puzzleScreen = new Intent(this, Puzzle.class);
-        startActivity(puzzleScreen);
-    }
-
     public void onClickMemoryGame(View view) {
         Intent MemoryScreen = new Intent(this, Memory.class);
         startActivity(MemoryScreen);

@@ -17,12 +17,6 @@ import java.util.ArrayList;
  */
 public class MainActivity extends AppCompatActivity {
 
-    int puzAScore;
-    int puzRScore;
-    int memAScore;
-    int memRScore;
-    int changerUsed;
-
     private static final String tag = "Teachers_Pal";
     public static final String PREFS_NAME = "MyPrefsFile";
 
@@ -39,11 +33,6 @@ public class MainActivity extends AppCompatActivity {
     public void onClickGameMenu(View view){
        Intent gameScreen = new Intent(this, Games.class);
        startActivity(gameScreen);
-    }
-
-    public void onClickScoreList(View view) {
-        Intent scoreScreen = new Intent(this, Scores.class);
-        startActivity(scoreScreen);
     }
 
     public void onClickProfile(View View) {
